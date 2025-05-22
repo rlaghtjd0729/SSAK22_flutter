@@ -31,7 +31,11 @@ dependencies:
   table_calendar: ^3.0.9
   flutter:
     sdk: flutter
+<<<<<<< HEAD
   image_picker: ^1.0.4   # (버전은 최신으로!)
+=======
+  image_picker: ^1.0.0
+>>>>>>> e1dee8f64cb388f28d1ed72bb42a96c2c28fa03b
 
 
   http: ^1.4.0
