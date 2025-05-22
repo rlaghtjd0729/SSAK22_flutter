@@ -21,7 +21,6 @@ class HomeScreen extends StatelessWidget {
                     icon: const Icon(Icons.calendar_month),
                     onPressed: () {
                       // TODO: 캘린더 페이지로 이동
-
                     },
                   ),
                   // 상점 아이콘 + 포인트
@@ -31,15 +30,20 @@ class HomeScreen extends StatelessWidget {
                         icon: const Icon(Icons.local_grocery_store),
                         onPressed: () {
                           // TODO: 상점 페이지로 이동
-
                         },
                       ),
                       const SizedBox(width: 4),
                       const Row(
                         children: [
-                          Icon(Icons.local_fire_department, color: Colors.orange),
+                          Icon(
+                            Icons.local_fire_department,
+                            color: Colors.orange,
+                          ),
                           SizedBox(width: 4),
-                          Text("130p", style: TextStyle(fontWeight: FontWeight.bold)),
+                          Text(
+                            "130p",
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
                         ],
                       ),
                     ],
@@ -66,21 +70,30 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 40),
               child: Container(
                 margin: const EdgeInsets.symmetric(horizontal: 32),
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 16,
+                ),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(16),
                   boxShadow: const [
-                    BoxShadow(color: Colors.black12, blurRadius: 6, offset: Offset(0, 2)),
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 6,
+                      offset: Offset(0, 2),
+                    ),
                   ],
                 ),
                 child: const Text(
-                  "오늘 물은 주셨나요?\n""도레미파 물 줄 시간입니당ㅏ!!""",
+                  "오늘 물은 주셨나요?\n"
+                  "도레미파 물 줄 시간입니당ㅏ!!"
+                  "",
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                   textAlign: TextAlign.center,
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
