@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'shop_screen.dart'; // ← 상점 화면 파일 import 추가
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -21,7 +22,6 @@ class HomeScreen extends StatelessWidget {
                     icon: const Icon(Icons.calendar_month),
                     onPressed: () {
                       // TODO: 캘린더 페이지로 이동
-
                     },
                   ),
                   // 상점 아이콘 + 포인트
@@ -30,8 +30,13 @@ class HomeScreen extends StatelessWidget {
                       IconButton(
                         icon: const Icon(Icons.local_grocery_store),
                         onPressed: () {
-                          // TODO: 상점 페이지로 이동
-
+                          // 여기서 ShopScreen으로 이동!
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ShopScreen(),
+                            ),
+                          );
                         },
                       ),
                       const SizedBox(width: 4),
@@ -53,7 +58,7 @@ class HomeScreen extends StatelessWidget {
             Expanded(
               child: Center(
                 child: Image.asset(
-                  'assets/images/character_hi.png', // ← 실제 이미지 파일 경로로 교체 필요
+                  'assets/images/character_hi.png',
                   width: 180,
                   height: 180,
                   fit: BoxFit.contain,
@@ -75,7 +80,7 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
                 child: const Text(
-                  "오늘 물은 주셨나요?\n""도레미파 물 줄 시간입니당ㅏ!!""",
+                  "오늘 물은 주셨나요?\n도레미파 물 줄 시간입니당ㅏ!!",
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                   textAlign: TextAlign.center,
                 ),
